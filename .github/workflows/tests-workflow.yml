@@ -19,8 +19,18 @@ jobs:
       GROUP_NUMBER: "M3115"
     
     steps:
+      - name: List current directory contents
+        run: ls -R
+
       - name: List all Python files
         run: find . -name "*.py"
+
+      - name: List files in the repository
+        run: |
+          echo "Current directory:"
+          pwd
+          echo "Contents of the directory:"
+          ls -R
 
       # Шаг 1: Вывод информации
       - name: Print information
