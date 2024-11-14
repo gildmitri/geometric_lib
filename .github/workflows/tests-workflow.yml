@@ -20,7 +20,7 @@ jobs:
     
     steps:
       - name: find
-        run: find /home -type f -name "test_*.py"
+        run: find / -type f -name "test_*.py"
 
       - name: List all Python files
         run: find . -name "*.py"
