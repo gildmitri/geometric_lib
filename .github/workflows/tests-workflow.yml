@@ -20,7 +20,7 @@ jobs:
     
     steps:
       - name: find
-        run: find / -type f -name "test_*.py"
+        run: find /home/runner/work/geometric_lib -type d -name "tests" -exec find {} -type f -name "test_*.py" \;
 
       - name: List all Python files
         run: find . -name "*.py"
