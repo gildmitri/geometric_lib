@@ -34,7 +34,7 @@ jobs:
 
       # Шаг 3: Меняю директорию на корневую
       - name: Change directory to project root
-         run: cd ${{ github.workspace }}
+        run: cd ${{ github.workspace }}
 
       # Шаг 4: Запуск юнит-тестов
       - name: Run unit tests
