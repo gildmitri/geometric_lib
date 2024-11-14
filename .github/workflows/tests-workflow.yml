@@ -34,8 +34,8 @@ jobs:
 
       # Шаг 3: Запуск юнит-тестов
       - name: Run unit tests
-	env:
-    	  PYTHONPATH: .
+        env:
+          PYTHONPATH: .
         run: |
           python3 -m unittest discover -s tests -p "test_*.py"
 
