@@ -32,20 +32,10 @@ jobs:
         with:
           python-version: 3.13
 
-
-      # Шаг -: -
-      - name: 1
-        run: pwd
-
-
-      # Шаг -: -
-      - name: 2
-        run: find . -type f -name "test_*.py"
-
       # Шаг 3: Запуск юнит-тестов
       - name: Run unit tests
         run: |
-          python -m unittest discover
+          python -m unittest discover -s geometric_lib/tests
 
       # Шаг 4: Проверка стиля с использованием flake8
       - name: Lint code with flake8
