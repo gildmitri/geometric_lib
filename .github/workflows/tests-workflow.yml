@@ -35,7 +35,7 @@ jobs:
       # Шаг 3: Запуск юнит-тестов
       - name: Run unit tests
         run: |
-          python -m unittest discover -s geometric_lib/tests -p "test_*.py"
+          python -m unittest discover -s /home/runner/work/geometric_lib/geometric_lib/tests -p "test_*.py"
 
       # Шаг 4: Проверка стиля с использованием flake8
       - name: Lint code with flake8
