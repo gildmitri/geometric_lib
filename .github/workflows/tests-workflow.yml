@@ -19,38 +19,29 @@ jobs:
       GROUP_NUMBER: "M3115"
     
     steps:
-      - name: find
-        run: find / -type d -name "tests" -exec find {} -type f -name "test_*.py" \;
+      # Шаг 1: Клонирование репозитория
+      - name: Checkout repository
+        uses: actions/checkout@v3
 
-      - name: List all Python files
-        run: find . -name "*.py"
-
-      - name: List files in the repository
-        run: |
-          echo "Current directory:"
-          pwd
-          echo "Contents of the directory:"
-          ls -R /home/runner/work
-
-      # Шаг 1: Вывод информации
+      # Шаг 2: Вывод информации
       - name: Print information
         run: |
           echo "ФИО: ${{ env.FULL_NAME }}"
           echo "Номер группы: ${{ env.GROUP_NUMBER }}"
           echo "Ник на Github: ${{ github.actor }}"
 
-      # Шаг 2: Установка Python
+      # Шаг 3: Установка Python
       - name: Set up Python 3.13
         uses: actions/setup-python@v4
         with:
           python-version: 3.13
 
-      # Шаг 3: Запуск юнит-тестов
+      # Шаг 4: Запуск юнит-тестов
       - name: Run unit tests
         run: |
-          python -m unittest discover -s /home/runner/work/geometric_lib/tests -p "test_*.py"
+          python -m unittest discover -s geometric_lib/tests -p "test_*.py"
 
-      # Шаг 4: Проверка стиля с использованием flake8
+      # Шаг 5: Проверка стиля с использованием flake8
       - name: Lint code with flake8
         run: |
           pip install flake8
