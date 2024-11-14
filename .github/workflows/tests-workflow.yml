@@ -37,7 +37,8 @@ jobs:
         env:
           PYTHONPATH: .
         run: |
-          python3 -m unittest discover -s ./tests -p "*.py"
+          echo "import sys; sys.path.insert(0, './tests')" > setup.py
+          python -m unittest discover -s tests -p "test_*.py"
 
       # Шаг 4: Проверка стиля с использованием flake8
       - name: Lint code with flake8
