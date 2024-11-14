@@ -1,7 +1,6 @@
-# Удалены неиспользуемые импорты
-# import circle
-# import square
-# import triangle
+import circle
+import square
+import triangle
 
 figs = ['circle', 'square', 'triangle']
 funcs = ['perimeter', 'area']
