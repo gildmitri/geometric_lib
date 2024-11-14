@@ -37,7 +37,7 @@ jobs:
         env:
           PYTHONPATH: .
         run: |
-          python3 -m unittest discover -s tests -p "*.py"
+          python3 -m unittest discover -s ./tests -p "*.py"
 
       # Шаг 4: Проверка стиля с использованием flake8
       - name: Lint code with flake8
