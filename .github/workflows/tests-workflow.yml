@@ -37,7 +37,7 @@ jobs:
         env:
           PYTHONPATH: .
         run: |
-          echo "import sys; sys.path.insert(0, './tests')" > setup.py
+          export PYTHONPATH=$PYTHONPATH:$(pwd)/tests
           python -m unittest discover -s tests -p "test_*.py"
 
       # Шаг 4: Проверка стиля с использованием flake8
