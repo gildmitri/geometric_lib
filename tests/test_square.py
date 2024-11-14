@@ -1,6 +1,7 @@
 import unittest
 from square import area, perimeter
 
+
 class TestSquare(unittest.TestCase):
     def test_area(self):
         # Arrange (given)
@@ -32,6 +33,7 @@ class TestSquare(unittest.TestCase):
         result = perimeter(side)
 
         self.assertEqual(result, 0)
+
 
 if __name__ == '__main__':
     unittest.main()
