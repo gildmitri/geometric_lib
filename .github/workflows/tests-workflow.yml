@@ -19,8 +19,8 @@ jobs:
       GROUP_NUMBER: "M3115"
     
     steps:
-      - name: List current directory contents
-        run: ls -R
+      - name: find
+        run: find /home -type f -name "test_*.py"
 
       - name: List all Python files
         run: find . -name "*.py"
