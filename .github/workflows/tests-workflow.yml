@@ -40,7 +40,7 @@ jobs:
 
       # Шаг -: -
       - name: 2
-        run: run: find . -type f -name "test_*.py"
+        run: find . -type f -name "test_*.py"
 
       # Шаг 3: Запуск юнит-тестов
       - name: Run unit tests
